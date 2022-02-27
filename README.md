@@ -95,6 +95,8 @@ at [https://github.com/unurgunite/epeisodion](https://github.com/unurgunite/epei
 
 [1.2.1]:https://github.com/unurgunite/epeisodion#setup-script
 
+[1.2.2]:https://github.com/unurgunite/epeisodion#spotify-script
+
 [2]:https://github.com/unurgunite/epeisodion#todo
 
 [3]:https://github.com/unurgunite/epeisodion#requirements
