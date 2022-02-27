@@ -6,7 +6,8 @@
 > varying in number from three to six and containing the main action of the drama.
 
 This repo will help you remove annoying podcasts (episodes) from the Spotify that do not bring any benefit to society,
-relying on imposed concepts such as tolerance for the public and freedom of speech.
+relying on imposed concepts such as tolerance for the public and freedom of speech. Epeisodion project is launched under
+the MIT license. Feel free to contribute!
 
 ## Documentation content
 
