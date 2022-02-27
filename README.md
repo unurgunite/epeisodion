@@ -60,7 +60,7 @@ As the [setup script](https://github.com/unurgunite/epeisodion#setup-script), th
 the `remove_podcasts.sh` filename and has several options to do in UNIX-98 style:
 
 ```shell
-Usage: sh $0 [-h help] [-l license]
+Usage: sh remove_podcasts.sh [-h help] [-l license]
   -h help       Display help
   -l license    Display license
 ```
