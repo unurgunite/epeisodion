@@ -87,3 +87,10 @@ function Unzip-Package
     }
     Stop-Process -Name "Spotify"
 }
+
+function main
+{
+    Unzip-Package
+}
+
+main
