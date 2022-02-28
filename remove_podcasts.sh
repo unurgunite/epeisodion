@@ -61,13 +61,18 @@ show_license() {
 LICENSE
 }
 
-#-------------------- Define `linux_util` function ---------------------------------------------------#
+#-------------------- Define `ms_util` function ---------------------------------------------------#
+ms_util() {
+  pwsh ./remove_podcasts.ps1
+}
+
+#-------------------- Define `linux_util` function ------------------------------------------------#
 
 linux_util() {
   return 0
 }
 
-#-------------------- Define `osx_util` function -----------------------------------------------------#
+#-------------------- Define `osx_util` function --------------------------------------------------#
 osx_util() {
   killall Spotify
   cd /Applications/Spotify.app/Contents/Resources/Apps/ || return 1
@@ -111,7 +116,7 @@ if [ $# -eq 0 ]; then
     linux_util
     ;;
   msys*)
-    # TODO: Add support for windows binaries
+    ms_util
     ;;
   cygwin*)
     # TODO: Add support for windows binaries
