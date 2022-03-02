@@ -143,12 +143,12 @@ function Unzip-Package
     {
         if (File-Exists("$std_spa_file"))
         {
-            Copy-Item "$std_spa_file" -Destination "$std_prog_dir\$std_spa_bak"
+            Copy-Item "$std_spa_file" -Destination "$std_spa_bak"
         }
-        Copy-Item "$std_spa_file" -Destination "$std_prog_dir\$std_spa_bak"
-        if ((Test-Path -Path "$std_prog_dir\$std_spa_bak") -eq $false)
+        Copy-Item "$std_spa_file" -Destination "$std_spa_bak"
+        if ((Test-Path -Path "$std_spa_bak") -eq $false)
         {
-            Write-Output "Can not create $std_prog_dir\$std_spa_bak file"
+            Write-Output "Can not create $std_spa_bak file"
             return 1
         }
         Edit-Source("$std_spa_file")
