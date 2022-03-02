@@ -72,6 +72,14 @@ linux_util() {
   return 0
 }
 
+#-------------------- Define `source_check` function ----------------------------------------------#
+source_check() {
+	t='album,playlist,artist,show,station,episode${i}'
+	if grep -q "$t" "xpui.js"; then
+		return 15
+	fi
+}
+
 #-------------------- Define `osx_util` function --------------------------------------------------#
 osx_util() {
   killall Spotify
@@ -79,7 +87,8 @@ osx_util() {
   cp xpui.spa xpui.spa.bak
   # shellcheck disable=SC2016
   # shellcheck disable=SC2094
-  unzip -p xpui.spa xpui.js | sed 's/,show,/,/' | sed 's/,episode"/"/' | sed 's/,episode${i}"/"/' >xpui.js
+  unzip -p xpui.spa xpui.js | sed 's/,show,/,/' | sed 's/,episode${i}`/`/' >xpui.js
+  source_check
   zip xpui.spa xpui.js
   open -a Spotify
   return 0
