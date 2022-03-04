@@ -87,7 +87,7 @@ osx_util() {
   cp xpui.spa xpui.spa.bak
   # shellcheck disable=SC2016
   # shellcheck disable=SC2094
-  unzip -p xpui.spa xpui.js | sed 's/,show,/,/' | sed 's/,episode${i}`/`/' >xpui.js
+  unzip -p xpui.spa xpui.js | sed 's/,show,/,/' | sed 's/,episode".concat(i)/"/' >xpui.js
   source_check
   zip xpui.spa xpui.js
   open -a Spotify
